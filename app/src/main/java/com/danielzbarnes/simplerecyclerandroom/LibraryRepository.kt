@@ -3,6 +3,7 @@ package com.danielzbarnes.simplerecyclerandroom
 import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.room.Room
+import com.danielzbarnes.simplerecyclerandroom.database.LibraryDao
 import com.danielzbarnes.simplerecyclerandroom.database.LibraryDatabase
 
 private const val LIBRARY_DATABASE = "library-database"
@@ -20,6 +21,8 @@ class LibraryRepository private constructor(context: Context){
 
     fun getBooks(): LiveData<List<Book>> = libraryDao.getBooks()
     fun getBook(id: String): LiveData<Book?> = libraryDao.getBook(id)
+
+    fun getGenre(): List<String> = libraryDao.getGenre()
 
 
     companion object {

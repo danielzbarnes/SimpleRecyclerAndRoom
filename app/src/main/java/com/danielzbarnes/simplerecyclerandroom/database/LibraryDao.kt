@@ -13,4 +13,7 @@ interface LibraryDao {
     @Query("SELECT * FROM book WHERE id=(:id)")
     fun getBook(id: String): LiveData<Book?>
 
+    @Query("SELECT genre FROM book")
+    fun getGenre(): List<String>
+
 }

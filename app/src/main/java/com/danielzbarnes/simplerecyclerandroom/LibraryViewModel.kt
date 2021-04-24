@@ -10,11 +10,9 @@ import kotlinx.coroutines.withContext
 
     val bookListLiveData = libraryRepository.getBooks()
 
-/*  find some excuse to showcase this
-
     suspend fun getSeriesList(): List<String> =
-            withContext(Dispatchers.IO){
-                return@withContext sermonRepository.getSeriesList()
-            }*/
+            withContext(Dispatchers.IO) {
+                return@withContext libraryRepository.getGenre()
+            }
 
 }
