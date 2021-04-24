@@ -1,2 +1,3 @@
 # SimpleRecyclerAndRoom
- A Simple RecyclerView to Display Room.Database Contents
+
+ A Simple RecyclerView to Display the contents of Room.Database in Android using Kotlin.
